@@ -107,7 +107,7 @@ func cmdEdit() {
 		}
 	}
 
-	cmd := exec.Command(editor, path)
+	cmd := exec.Command("sh", "-c", editor+" "+path)
 	cmd.Stdin = os.Stdin
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
